@@ -50,7 +50,7 @@ Nossa aplicação adota a **Arquitetura Hexagonal (Ports & Adapters)**. Isso gar
 ### Estrutura do Projeto
 - **`cmd/`**: Define a porta de entrada em nosso projeto.
 - **`internal/core/domain/`**: Define as entidades de negócio e as *Ports* (interfaces que descrevem as necessidades do sistema).
-- - **`internal/core/ports`**: Define D do SOLID, onde definimos nossas interfaces.
+- **`internal/core/ports`**: Define D do SOLID, onde definimos nossas interfaces.
 - **`internal/core/usecase/`**: Contém as regras de negócio puras (casos de uso) que orquestram o fluxo de execução.
 - **`internal/adapter/gemini/`**: Implementação da *Port* de saída que consome a API do Gemini.
 - **`internal/adapter/http/`**: Implementação da *Port* de entrada que recebe requisições HTTP e as encaminha para o caso de uso correspondente.
