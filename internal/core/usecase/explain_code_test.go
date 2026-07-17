@@ -18,15 +18,12 @@ func (m *mockAIService) ExplainCode(ctx context.Context, query domain.CodeQuery)
 }
 
 func TestExplainCodeUseCase_Execute_Success(t *testing.T) {
-	// Arrange
 	mockAI := &mockAIService{}
 	uc := usecase.NewExplainCodeUseCase(mockAI)
 	query := domain.CodeQuery{Code: "fmt.Println(\"GDG\")", Language: "go"}
 
-	// Act
 	resp, err := uc.Execute(context.Background(), query)
 
-	// Assert
 	if err != nil {
 		t.Fatalf("esperava erro nulo, retornou: %v", err)
 	}

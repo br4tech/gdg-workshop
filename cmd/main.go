@@ -12,7 +12,8 @@ import (
 )
 
 func main() {
-	// Configurando o Logger Estruturado Nativo (slog) formatado em JSON para Cloud Logging
+	// Configurando o Logger Estruturado Nativo
+	// formatado em JSON para Cloud Logging
 	logger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
 	slog.SetDefault(logger)
 

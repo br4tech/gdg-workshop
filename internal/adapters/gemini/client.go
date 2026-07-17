@@ -45,7 +45,6 @@ func (g *geminiClient) ExplainCode(ctx context.Context, query domain.CodeQuery) 
 	}
 
 	// Por simplicidade do tempo do workshop, estruturamos de forma fixa.
-	// Nota: Em cenários de produção, instrua sobre Structured Outputs via JSON Schema.
 	return &domain.CodeExplanation{
 		Summary: resp.Text(),
 		Suggestions: []string{
